@@ -48,11 +48,9 @@
             el.href = url
             const code = new QRCode(el, {
                 text: url,
-                width: 512,
-                height: 512,
-                class: "img-fluid"
+                width: 150,
+                height: 150,
             })
-            code._oDrawing._elCanvas.classList.add("img-fluid")
         }
     </script>
 </head>
@@ -68,14 +66,14 @@
         <div class="row">
             <template x-if="iosId">
                 <div class="col">
-                    <h3 class="text-center">iOS</h3>
-                    <a href="#" x-init="initQRCode($el, iosId)" target="_blank" class="inline-block"></a>
+                    <h3>iOS</h3>
+                    <a href="#" x-init="initQRCode($el, iosId)" target="_blank" class="d-block"></a>
                 </div>
             </template>
             <template x-if="androidId">
                 <div class="col">
-                    <h3 class="text-center">Android</h3>
-                    <a href="#" x-init="initQRCode($el, androidId)" target="_blank" class="inline-block"></a>
+                    <h3>Android</h3>
+                    <a href="#" x-init="initQRCode($el, androidId)" target="_blank" class="d-block"></a>
                 </div>
             </template>
         </div>
